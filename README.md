@@ -17,6 +17,6 @@ SeksarianSyntax is a finance management tool that works to simplifying the daily
 
 ## Experience
 
-    
+
 
 ## A word from the creators
