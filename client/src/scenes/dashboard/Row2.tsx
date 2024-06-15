@@ -63,7 +63,7 @@ const Row2 = () => {
     <>
       <DashboardBox gridArea="d">
         <BoxHeader
-          title="Operational vs Non-Operational Expenses"
+          title="Investments vs expenditure"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -113,7 +113,7 @@ const Row2 = () => {
         </ResponsiveContainer>
       </DashboardBox>
       <DashboardBox gridArea="e">
-        <BoxHeader title="Campaigns and Targets" sideText="+4%" />
+        <BoxHeader title="Portfolio Breakdown" sideText="+4%" />
         <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
           <PieChart
             width={130}
@@ -139,19 +139,19 @@ const Row2 = () => {
             </Pie>
           </PieChart>
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
-            <Typography variant="h5">Target Sales</Typography>
+            <Typography variant="h5">Mutual Funds</Typography>
             <Typography m="0.4rem 0" variant="h4" color={palette.primary[200]}>
-              83
+              60%
             </Typography>
             <Typography variant="h6">
-              Finance goals of the campaign that is desired
+              User mainly spends 60% on Investments.
             </Typography>
           </Box>
           <Box flexBasis="40%">
-            <Typography variant="h5">Losses in Revenue</Typography>
-            <Typography variant="h6">Losses are down 25%</Typography>
+            <Typography variant="h5">Stocks</Typography>
+            <Typography variant="h6">Stocks occupy 40%</Typography>
             <Typography mt="0.5rem" variant="h5">
-              Profit Margins
+              Margins
             </Typography>
             <Typography variant="h6">
               Margins are up by 30% from last month.
@@ -160,7 +160,7 @@ const Row2 = () => {
         </FlexBetween>
       </DashboardBox>
       <DashboardBox gridArea="f">
-        <BoxHeader title="Product Prices vs Expenses" sideText="+4%" />
+        <BoxHeader title="Cash Flow Analysis" sideText="+4%" />
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart
             margin={{

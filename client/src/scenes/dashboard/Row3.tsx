@@ -89,8 +89,8 @@ const Row3 = () => {
     <>
       <DashboardBox gridArea="g">
         <BoxHeader
-          title="List of Products"
-          sideText={`${productData?.length} products`}
+          title="Utility Bills"
+          sideText={`${productData?.length} Pending and Completed Bills`}
         />
         <Box
           mt="0.5rem"
@@ -123,8 +123,8 @@ const Row3 = () => {
       </DashboardBox>
       <DashboardBox gridArea="h">
         <BoxHeader
-          title="Recent Orders"
-          sideText={`${transactionData?.length} latest transactions`}
+          title=" Financial Goals Progress"
+          sideText={`${transactionData?.length} Long term Financial objectives`}
         />
         <Box
           mt="1rem"
@@ -156,7 +156,7 @@ const Row3 = () => {
         </Box>
       </DashboardBox>
       <DashboardBox gridArea="i">
-        <BoxHeader title="Expense Breakdown By Category" sideText="+4%" />
+        <BoxHeader title="Budgeting Tools" sideText="+4%" />
         <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
           {pieChartData?.map((data, i) => (
             <Box key={`${data[0].name}-${i}`}>
@@ -198,10 +198,7 @@ const Row3 = () => {
           ></Box>
         </Box>
         <Typography margin="0 1rem" variant="h6">
-          Orci aliquam enim vel diam. Venenatis euismod id donec mus lorem etiam
-          ullamcorper odio sed. Ipsum non sed gravida etiam urna egestas
-          molestie volutpat et. Malesuada quis pretium aliquet lacinia ornare
-          sed. In volutpat nullam at est id cum pulvinar nunc.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestiae eos incidunt a optio quam illo labore voluptas est nam quibusdam nemo natus, sequi rem pariatur hic maxime consequuntur dolores.
         </Typography>
       </DashboardBox>
     </>

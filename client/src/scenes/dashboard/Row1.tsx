@@ -64,8 +64,8 @@ const Row1 = () => {
     <>
       <DashboardBox gridArea="a">
         <BoxHeader
-          title="Revenue and Expenses"
-          subtitle="top line represents revenue, bottom line represents expenses"
+          title="Income vs Expenses"
+          subtitle="top line represents income bottom line represents expenses"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -85,7 +85,7 @@ const Row1 = () => {
                 <stop
                   offset="5%"
                   stopColor={palette.primary[300]}
-                  stopOpacity={0.5}
+                  stopOpacity={0.6}
                 />
                 <stop
                   offset="95%"
@@ -139,8 +139,8 @@ const Row1 = () => {
       </DashboardBox>
       <DashboardBox gridArea="b">
         <BoxHeader
-          title="Profit and Revenue"
-          subtitle="top line represents revenue, bottom line represents expenses"
+          title="Budgets vs Actual"
+          subtitle="top line represents Budgets, bottom line represents Actual"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -198,8 +198,8 @@ const Row1 = () => {
       </DashboardBox>
       <DashboardBox gridArea="c">
         <BoxHeader
-          title="Revenue Month by Month"
-          subtitle="graph representing the revenue month by month"
+          title="Transaction History"
+          subtitle="graph representing transaction history within 1 day to 6 months"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
