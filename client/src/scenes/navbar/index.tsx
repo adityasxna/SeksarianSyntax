@@ -36,6 +36,34 @@ const Navbar = (props: Props) => {
 
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
+            to="/Income vs Expenses"
+            onClick={() => setSelected("Income vs Expenses")}
+            style={{
+              color: selected === "Income vs Expenses" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+            Income vs Expenses
+          </Link>
+        </Box>
+
+        
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/ Budget vs Actual"
+            onClick={() => setSelected(" Budget vs Actual")}
+            style={{
+              color: selected === " Budget vs Actual" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+            Budget vs Actual
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
             to="/Transaction History"
             onClick={() => setSelected("Transaction History")}
             style={{
@@ -49,6 +77,84 @@ const Navbar = (props: Props) => {
 
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
+            to="/ Insights"
+            onClick={() => setSelected(" Insights")}
+            style={{
+              color: selected === " Insights" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+           Insights
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/Portfolio"
+            onClick={() => setSelected("Portfolio")}
+            style={{
+              color: selected === "Portfolio" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+           Portfolio
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/Cash flow"
+            onClick={() => setSelected("Cash flow")}
+            style={{
+              color: selected === "Cash flow" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+           Cash flow 
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/Utility Bills"
+            onClick={() => setSelected("Utility Bills")}
+            style={{
+              color: selected === "Utility Bills" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+           Utility Bills
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/Fiance Goals"
+            onClick={() => setSelected("Fiance Goals")}
+            style={{
+              color: selected === "Fiance Goals" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+           Fiance Goals
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/Budgeting Tools"
+            onClick={() => setSelected("Budgeting Tools")}
+            style={{
+              color: selected === "Budgeting Tools" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+           Budgeting Tools
+          </Link>
+        </Box>
+
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
             to="/predictions"
             onClick={() => setSelected("predictions")}
             style={{
@@ -57,58 +163,6 @@ const Navbar = (props: Props) => {
             }}
           >
             Algorithms
-          </Link>
-        </Box>
-
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/predictions"
-            onClick={() => setSelected("predictions")}
-            style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-            Insights
-          </Link>
-        </Box>
-
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/predictions"
-            onClick={() => setSelected("predictions")}
-            style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-            Utility bills
-          </Link>
-        </Box>
-
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/predictions"
-            onClick={() => setSelected("predictions")}
-            style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-            Budgeting Tools
-          </Link>
-        </Box>
-
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/predictions"
-            onClick={() => setSelected("predictions")}
-            style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-           Pending Payments
           </Link>
         </Box>
 
