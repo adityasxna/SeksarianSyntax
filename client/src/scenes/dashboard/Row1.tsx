@@ -64,8 +64,8 @@ const Row1 = () => {
     <>
       <DashboardBox gridArea="a">
         <BoxHeader
-          title="Revenue and Expenses"
-          subtitle="top line represents revenue, bottom line represents expenses"
+          title="Income vs Expenses"
+          subtitle="top line represents income bottom line represents expenses"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -85,7 +85,7 @@ const Row1 = () => {
                 <stop
                   offset="5%"
                   stopColor={palette.primary[300]}
-                  stopOpacity={0.5}
+                  stopOpacity={0.6}
                 />
                 <stop
                   offset="95%"
@@ -109,12 +109,12 @@ const Row1 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               tickLine={false}
               axisLine={{ strokeWidth: "0" }}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
               domain={[8000, 23000]}
             />
             <Tooltip />
@@ -139,8 +139,8 @@ const Row1 = () => {
       </DashboardBox>
       <DashboardBox gridArea="b">
         <BoxHeader
-          title="Profit and Revenue"
-          subtitle="top line represents revenue, bottom line represents expenses"
+          title="Budgets vs Actual"
+          subtitle="top line represents Budgets, bottom line represents Actual"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -159,38 +159,38 @@ const Row1 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               yAxisId="left"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <Tooltip />
             <Legend
               height={20}
               wrapperStyle={{
-                margin: "0 0 10px 0",
+                margin: "0 0 13px 0",
               }}
             />
             <Line
               yAxisId="left"
               type="monotone"
-              dataKey="profit"
+              dataKey="budget"
               stroke={palette.tertiary[500]}
             />
             <Line
               yAxisId="right"
               type="monotone"
-              dataKey="revenue"
+              dataKey="actual"
               stroke={palette.primary.main}
             />
           </LineChart>
@@ -198,8 +198,8 @@ const Row1 = () => {
       </DashboardBox>
       <DashboardBox gridArea="c">
         <BoxHeader
-          title="Revenue Month by Month"
-          subtitle="graph representing the revenue month by month"
+          title="Transaction History"
+          subtitle="graph representing transaction history within 1 day to 6 months"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -218,8 +218,8 @@ const Row1 = () => {
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0.8}
+                  stopColor={palette.primary[900]}
+                  stopOpacity={0.9}
                 />
                 <stop
                   offset="95%"
@@ -233,12 +233,12 @@ const Row1 = () => {
               dataKey="name"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <Tooltip />
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />
