@@ -21,13 +21,13 @@ import {
 } from "recharts";
 
 const pieData = [
-  { name: "Group A", value: 600 },
-  { name: "Group B", value: 400 },
+  { name: "Group A", value: 200 },
+  { name: "Group B", value: 800 },
 ];
 
 const Row2 = () => {
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = [palette.secondary[300], palette.secondary[700]];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
 
@@ -80,14 +80,14 @@ const Row2 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               yAxisId="left"
               orientation="left"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               yAxisId="right"
@@ -101,7 +101,7 @@ const Row2 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="Non Operational Expenses"
-              stroke={palette.tertiary[500]}
+              stroke={palette.tertiary[100]}
             />
             <Line
               yAxisId="right"
@@ -116,7 +116,7 @@ const Row2 = () => {
         <BoxHeader title="Campaigns and Targets" sideText="+4%" />
         <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
           <PieChart
-            width={110}
+            width={130}
             height={100}
             margin={{
               top: 0,
@@ -128,8 +128,8 @@ const Row2 = () => {
             <Pie
               stroke="none"
               data={pieData}
-              innerRadius={18}
-              outerRadius={38}
+              innerRadius={20}
+              outerRadius={40}
               paddingAngle={2}
               dataKey="value"
             >
@@ -140,7 +140,7 @@ const Row2 = () => {
           </PieChart>
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
             <Typography variant="h5">Target Sales</Typography>
-            <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
+            <Typography m="0.4rem 0" variant="h4" color={palette.primary[200]}>
               83
             </Typography>
             <Typography variant="h6">
@@ -150,7 +150,7 @@ const Row2 = () => {
           <Box flexBasis="40%">
             <Typography variant="h5">Losses in Revenue</Typography>
             <Typography variant="h6">Losses are down 25%</Typography>
-            <Typography mt="0.4rem" variant="h5">
+            <Typography mt="0.5rem" variant="h5">
               Profit Margins
             </Typography>
             <Typography variant="h6">
@@ -177,7 +177,7 @@ const Row2 = () => {
               name="price"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
               tickFormatter={(v) => `$${v}`}
             />
             <YAxis
@@ -186,7 +186,7 @@ const Row2 = () => {
               name="expense"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
               tickFormatter={(v) => `$${v}`}
             />
             <ZAxis type="number" range={[20]} />

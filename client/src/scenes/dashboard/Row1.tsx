@@ -109,12 +109,12 @@ const Row1 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               tickLine={false}
               axisLine={{ strokeWidth: "0" }}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
               domain={[8000, 23000]}
             />
             <Tooltip />
@@ -159,26 +159,26 @@ const Row1 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               yAxisId="left"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <Tooltip />
             <Legend
               height={20}
               wrapperStyle={{
-                margin: "0 0 10px 0",
+                margin: "0 0 13px 0",
               }}
             />
             <Line
@@ -218,8 +218,8 @@ const Row1 = () => {
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0.8}
+                  stopColor={palette.primary[900]}
+                  stopOpacity={0.9}
                 />
                 <stop
                   offset="95%"
@@ -233,12 +233,12 @@ const Row1 = () => {
               dataKey="name"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "13px" }}
             />
             <Tooltip />
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />
