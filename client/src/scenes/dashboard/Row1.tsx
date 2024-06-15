@@ -15,7 +15,8 @@ import {
   Legend,
   Line,
   Tooltip,
-  Area,[-=]
+  Area,
+} from "recharts";
 const Row1 = () => {
   const { palette } = useTheme();
 
