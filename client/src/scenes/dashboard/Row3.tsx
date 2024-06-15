@@ -87,7 +87,7 @@ const Row3 = () => {
 
   return (
     <>
-      <DashboardBox gridArea="g">
+      <DashboardBox gridArea="g" bgcolor={"#243256"}>
         <BoxHeader
           title="Utility Bills"
           sideText={`${productData?.length} Pending and Completed Bills`}
@@ -121,7 +121,7 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
-      <DashboardBox gridArea="h">
+      <DashboardBox gridArea="h" bgcolor={"#243256"}>
         <BoxHeader
           title=" Financial Goals Progress"
           sideText={`${transactionData?.length} Long term Financial objectives`}
@@ -155,7 +155,7 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
-      <DashboardBox gridArea="i">
+      <DashboardBox gridArea="i" bgcolor={"#243256"}>
         <BoxHeader title="Budgeting Tools" sideText="+4%" />
         <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
           {pieChartData?.map((data, i) => (
@@ -179,7 +179,7 @@ const Row3 = () => {
           ))}
         </FlexBetween>
       </DashboardBox>
-      <DashboardBox gridArea="j">
+      <DashboardBox gridArea="j" bgcolor={"#243256"}>
         <BoxHeader
           title="Overall Summary and Explanation Data"
           sideText="+15%"

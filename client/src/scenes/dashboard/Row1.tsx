@@ -15,14 +15,11 @@ import {
   Legend,
   Line,
   Tooltip,
-  Area,
-} from "recharts";
-
-type Props = {};
+  Area,[-=]
 const Row1 = () => {
   const { palette } = useTheme();
-  const { data } = useGetKpisQuery();
-  console.log("date:", data)
+  const {  data } = useGetKpisQuery();
+  console.log("data:", data)
 
   const revenue = useMemo(() => {
     return (
@@ -64,7 +61,7 @@ const Row1 = () => {
 
   return (
     <>
-      <DashboardBox gridArea="a">
+      <DashboardBox gridArea="a" bgcolor={"#243256"} color={"white"}>
         <BoxHeader
           title="Income vs Expenses"
           subtitle="top line represents income bottom line represents expenses"
@@ -86,12 +83,12 @@ const Row1 = () => {
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor={palette.primary[300]}
+                  stopColor={palette.primary[100]}
                   stopOpacity={0.6}
                 />
                 <stop
                   offset="95%"
-                  stopColor={palette.primary[300]}
+                  stopColor={palette.primary[100]}
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -139,7 +136,7 @@ const Row1 = () => {
           </AreaChart>
         </ResponsiveContainer>
       </DashboardBox>
-      <DashboardBox gridArea="b">
+      <DashboardBox gridArea="b" bgcolor={"#243256"}>
         <BoxHeader
           title="Budgets vs Actual"
           subtitle="top line represents Budgets, bottom line represents Actual"
@@ -198,10 +195,10 @@ const Row1 = () => {
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
-      <DashboardBox gridArea="c">
+      <DashboardBox gridArea="c" bgcolor={"#243256"}>
         <BoxHeader
           title="Transaction History"
-          subtitle="graph representing transaction history within 1 day to 6 months"
+          subtitle="graph representing transaction history within 2 day to 6 months"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -230,8 +227,11 @@ const Row1 = () => {
                 />
               </linearGradient>
             </defs>
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
-            <XAxis
+
+            
+
+             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+             <XAxis
               dataKey="name"
               axisLine={false}
               tickLine={false}

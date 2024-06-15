@@ -10,9 +10,10 @@ const Navbar = (props: Props) => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState("dashboard");
   return (
-    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300] }>
+    <div className="nav">
+    <FlexBetween mb="0.25rem" p="0.5rem 0rem 0.7rem" color={palette.grey[100]  }>
       {/* LEFT SIDE */}
-      <FlexBetween gap="0.70rem" >
+      <FlexBetween gap="0.70rem"  >
         <PixIcon sx={{ fontSize: "25px" }} />
         <Typography variant="h3" fontSize="20px">
           FinGuard
@@ -20,13 +21,13 @@ const Navbar = (props: Props) => {
       </FlexBetween>
 
       {/* RIGHT SIDE */}
-      <FlexBetween gap="2rem"  borderColor={"white"} borderBottom={"1px, solid, white"}>
+      <FlexBetween gap="2rem" p="0.5rem 0rem 0.7rem">
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
             to="/"
             onClick={() => setSelected("dashboard")}
             style={{
-              color: selected === "dashboard" ? "inherit" : palette.grey[700],
+              color: selected === "dashboard" ? "inherit" : palette.grey[100],
               textDecoration: "inherit",
             }}
           >
@@ -34,33 +35,6 @@ const Navbar = (props: Props) => {
           </Link>
         </Box>
 
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/Income vs Expenses"
-            onClick={() => setSelected("Income vs Expenses")}
-            style={{
-              color: selected === "Income vs Expenses" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-            Income vs Expenses
-          </Link>
-        </Box>
-
-        
-
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/ Budget vs Actual"
-            onClick={() => setSelected(" Budget vs Actual")}
-            style={{
-              color: selected === " Budget vs Actual" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-            Budget vs Actual
-          </Link>
-        </Box>
 
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
@@ -168,6 +142,7 @@ const Navbar = (props: Props) => {
 
       </FlexBetween>
     </FlexBetween>
+    </div>
   );
 };
 
