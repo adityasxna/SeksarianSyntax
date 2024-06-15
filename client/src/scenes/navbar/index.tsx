@@ -10,17 +10,17 @@ const Navbar = (props: Props) => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState("dashboard");
   return (
-    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]}>
+    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300] }>
       {/* LEFT SIDE */}
-      <FlexBetween gap="0.75rem">
+      <FlexBetween gap="0.70rem" >
         <PixIcon sx={{ fontSize: "25px" }} />
-        <Typography variant="h3" fontSize="23px">
+        <Typography variant="h3" fontSize="20px">
           FinGuard
         </Typography>
       </FlexBetween>
 
       {/* RIGHT SIDE */}
-      <FlexBetween gap="2rem">
+      <FlexBetween gap="2rem"  borderColor={"white"} borderBottom={"1px, solid, white"}>
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
             to="/"
