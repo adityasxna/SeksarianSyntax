@@ -2,7 +2,7 @@ import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery } from "@/state/api";
 import { useTheme } from "@mui/material";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import {
   ResponsiveContainer,
   CartesianGrid,
@@ -21,7 +21,11 @@ const Row1 = () => {
   const { palette } = useTheme();
 
   const {  data } = useGetKpisQuery();
-  console.log("data:", data)
+  console.log("data:", data);
+
+  useEffect(() =>{
+    console.log('Data',data)
+  },[data])
 
   const revenue = useMemo(() => {
     return (
