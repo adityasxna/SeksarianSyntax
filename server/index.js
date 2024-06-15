@@ -23,7 +23,7 @@ app.use(cors());
 // Routes
 app.use("/kpi", kpiRoutes)
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8080;
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
