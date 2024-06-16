@@ -53,17 +53,17 @@ const Row1 = () => {
   }, [data]);
 
   const revenueProfit = useMemo(() => {
-    return (
-      data &&
-      data[0].monthlyData.map(({ month, revenue, expenses }) => {
-        return {
-          name: month.substring(0, 3),
-          revenue: revenue,
-          profit: (revenue - expenses).toFixed(2),
-        };
-      })
-    );
-  }, [data]);
+    if (!data || !Array.isArray(data) || !data[0] || !Array.isArray(data[0].monthlyData)) {
+      console.error("Invalid data structure:", data);
+      return []; }
+
+    const transformedData = data[0].monthlyData.map(({ month, revenue, expenses }) => ({
+      name: month.substring(0, 3),
+      budget: revenue, 
+      actual: parseFloat((revenue - expenses).toFixed(2)), 
+    }));
+    return transformedData;
+  }, [data]); 
 
   return (
     <>
